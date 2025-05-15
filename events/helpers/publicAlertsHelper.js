@@ -1,5 +1,3 @@
-// events/helpers/publicAlertsHelper.js
-
 class PublicAlerts {
   constructor() {
     // You can add any setup here if needed
