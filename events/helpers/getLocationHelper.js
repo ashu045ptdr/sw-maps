@@ -1,4 +1,3 @@
-// events/helpers/getLocationHelper.js
 
 async function loadGeoTiffMaps(locationID) {
   // Replace with your actual GeoTiff fetching logic
