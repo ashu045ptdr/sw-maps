@@ -1,5 +1,5 @@
 const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3");
-require("dotenv").config(); // should be at the top of your file
+require("dotenv").config();
 
 // Initialize S3 client using env credentials
 const s3Client = new S3Client({
