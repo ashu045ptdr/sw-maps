@@ -1,0 +1,17 @@
+{
+  "name": "sw-maps",
+  "version": "1.0.0",
+  "description": "Serverless application for SW Maps with AWS SAM",
+  "main": "apiHandler.js",
+  "scripts": {
+    "start": "sam local start-api",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1430.0",
+    "jsonwebtoken": "^9.0.0",
+    "dotenv": "^16.4.5"
+  }
+}

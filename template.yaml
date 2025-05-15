@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SW Maps API - Serverless Application
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs18.x
+    MemorySize: 128
+
+Resources:
+  GetLocationApi:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: events/apiHandler.handler
+      Runtime: nodejs18.x
+      CodeUri: .
+      Environment:
+        Variables:
+          JWT_SECRET: YOUR_JWT_SECRET
+          AWS_ACCESS_KEY_ID: YOUR_AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: YOUR_AWS_SECRET_ACCESS_KEY
+          S3_BUCKET: YOUR_S3_BUCKET
+          REGION: AWS_REGION
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /api/location/{locationID}/{type}
+            Method: get
+Parameters:
+  JWT_SECRET:
+    Type: String
